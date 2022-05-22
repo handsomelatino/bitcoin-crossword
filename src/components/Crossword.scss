@@ -1,0 +1,116 @@
+.__crossword {
+  padding: 20px;
+
+  &.solved {
+    pointer-events: none;
+
+    .cell.letter {
+      background: linear-gradient(-45deg, #f0960f, #fde871, #f88437, #ffffff);
+      background-size: 400% 400%;
+      animation: gradient 3s ease infinite;
+      animation-delay: 0.5s;
+    }
+  }
+  
+  .row {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cell {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    user-select: none;
+
+    &.letter {
+      border: 1px solid black;
+      outline: 1px solid black;
+      box-shadow: 0 3px 0 1px #eaeaea;
+      background-color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+
+      &:hover:not(.active) {
+        background-color: #ffeb94;
+      }
+    }
+
+    &.active {
+      background-color: #eaeaea;
+    }
+    
+    &.inputting {
+      
+      position: relative;
+      background-color: #ffd06b;
+
+      .caret {
+        position: absolute;
+        border-bottom: 2px solid black;
+        bottom: 4px;
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: blink 1.5s step-end infinite;
+      }
+    }  
+  }
+
+  .confetti {
+
+    position: fixed;
+    // overflow: hidden;
+
+    &-1 {
+      top: 33%;
+      left: 50%;
+    }
+
+    &-2 {
+      top: 66%;
+      left: 33%;
+    }
+
+    &-3 {
+      top: 66%;
+      left: 66%;
+    }
+  }
+}
+
+.react-simple-keyboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+    transform: rotate(4deg);
+	}
+	50% {
+		background-position: 100% 50%;
+    transform: rotate(-4deg);
+	}
+	100% {
+		background-position: 0% 50%;
+    transform: rotate(4deg);
+	}
+}

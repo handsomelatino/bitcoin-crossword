@@ -1,7 +1,7 @@
 export const KEYBOARD_LAYOUT = {
   'default': [
-    '{tab} Q W E R T Y U I O P {bksp}',
-    ' A S D F G H J K L ',
+    ' Q W E R T Y U I O P {bksp}',
+    ' A S D F G H J K L {tab}',
     '{alt} Z X C V B N M ',
   ]
 }

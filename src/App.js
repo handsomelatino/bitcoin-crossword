@@ -1,31 +1,31 @@
-// import { useEffect, useState } from 'react';
-// import ReactMarkdown from 'react-markdown';
-// import Crossword from './components/Crossword';
-// import { isMobile } from 'react-device-detect';
-// import classNames from 'classnames';
+import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import Crossword from './components/Crossword';
+import { isMobile } from 'react-device-detect';
+import classNames from 'classnames';
 
-// import Checkbox from './components/Checkbox';
+import Checkbox from './components/Checkbox';
 import './App.scss';
 
 function App() {
 
-  // const [msgDecrypted, setMsgDecrypted] = useState(null);
-  // const [showKeyboard, setShowKeyboard] = useState(() => isMobile);
-  // const [cypher, setCypher] = useState(null);
+  const [msgDecrypted, setMsgDecrypted] = useState(null);
+  const [showKeyboard, setShowKeyboard] = useState(() => isMobile);
+  const [cypher, setCypher] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchCypher = async () => {
-  //     const res = await fetch('/cypher.txt');
-  //     const data = await res.text();
-  //     setCypher(data);
-  //   }
+  useEffect(() => {
+    const fetchCypher = async () => {
+      const res = await fetch('/cypher.txt');
+      const data = await res.text();
+      setCypher(data);
+    }
 
-  //   fetchCypher();
-  // }, []);
+    fetchCypher();
+  }, []);
 
   return (
     <div className="App">
-      {/* <h1 className='narrow'>A Bounty Hides Behind This Crossword</h1>
+      <h1 className='narrow'>A Bounty Hides Behind This Crossword</h1>
 
       <section className={classNames('crossword-explanation', { 'keyboard-visible': showKeyboard && !msgDecrypted })}>
         <Crossword solved={msgDecrypted} onSolvePuzzle={msg => setMsgDecrypted(msg)} showKeyboard={showKeyboard} cypher={cypher} />
@@ -50,8 +50,8 @@ function App() {
           <ReactMarkdown children={msgDecrypted} />
         </div>
       )}
- */}
-      <div>Created by <a href='https://handsomelatino.com'>handsomelatino.com</a> <pre>add</pre></div>
+
+      <div>Created by <a href='https://handsomelatino.com'>handsomelatino.com</a><pre>bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn</pre></div>
       
     </div>
   );
