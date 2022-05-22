@@ -1,21 +1,30 @@
 {
-  "name": "amiga-mia",
+  "name": "bitcoin-crossword",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "classnames": "^2.3.1",
+    "crypto-js": "^4.1.1",
+    "include-media": "^1.4.10",
     "react": "^18.0.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "^18.0.0",
+    "react-dom-confetti": "^0.2.0",
+    "react-markdown": "^8.0.1",
     "react-scripts": "5.0.0",
+    "react-simple-keyboard": "^3.4.94",
+    "sass": "^1.49.9",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "encrypt-message": "node ./src/utils/encrypt_message.js"
   },
   "eslintConfig": {
     "extends": [
