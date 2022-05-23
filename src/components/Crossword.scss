@@ -58,13 +58,19 @@
         transform: translateX(-50%);
         animation: blink 1.5s step-end infinite;
       }
-    }  
+    }
+
+    .hint-index {
+      position: absolute;
+      top: 1px;
+      right: 2px;
+      font-size: 10px;
+      font-weight: bold;
+    }
   }
 
   .confetti {
-
     position: fixed;
-    // overflow: hidden;
 
     &-1 {
       top: 33%;

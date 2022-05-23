@@ -81,15 +81,25 @@ function App() {
 
       { !msgDecrypted && (
         <div className='clues'>
-          <h2>CLUES</h2>
+          <h2>WORD HINTS</h2>
 
           <ol>
+            <li>Institutions that custody your hard work but frequently <em>lend it out with barely fraction in reserves.</em></li>
+            <li>A common verb.</li>
+            <li>Fiat money is ___ backed by any commodity.</li>
+            <li><em>All ____ base are belong to us.</em></li>
+            <li>Those whom we can trust.</li>
+          </ol>
+
+          <h2>CLUES</h2>
+
+          <ul>
             <li>A letter "E" was discovered by <a href="https://www.reddit.com/r/Bitcoin/comments/uva9za/comment/i9kaxf9/?utm_source=reddit&utm_medium=web2x&context=3">PerformanceVarious45</a>.</li>
             <li>Words are all in English, and together they form a complete, simple sentence in English.</li>
             <li>No knowledge about the BIP-39 wordlist is needed or was used as a reference for this crossword.</li>
             <li>Pizza Day and Laszlo Hanyecz are not related, just honored because of the date: May 22nd.</li>
             <li>Instead, Bitcoin, Satoshi Nakamoto, and the <strong>Genesis Block</strong> are all part of the riddle.</li>
-          </ol>
+          </ul>
         </div>
       )}
 

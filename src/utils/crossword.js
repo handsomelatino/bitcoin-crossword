@@ -8,11 +8,11 @@ export const GRID_HEIGHT = 9;
  * Array of words 
  */
 export const CROSSWORD_LIST = [
-  { x: 2, y: 0, length: 3, direction: VERTICAL },
-  { x: 4, y: 0, length: 7, direction: VERTICAL },
-  { x: 1, y: 1, length: 4, direction: HORIZONTAL },
   { x: 0, y: 6, length: 5, direction: HORIZONTAL },
   { x: 1, y: 6, length: 3, direction: VERTICAL },
+  { x: 2, y: 0, length: 3, direction: VERTICAL },
+  { x: 1, y: 1, length: 4, direction: HORIZONTAL },
+  { x: 4, y: 0, length: 7, direction: VERTICAL },
 ];
 
 export const GRID = (function() {

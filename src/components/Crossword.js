@@ -34,7 +34,7 @@ const initializeWords = () => {
 
   // A letter was discovered on the thumbnail image by reditto: PerformanceVarious45
   // https://www.reddit.com/r/Bitcoin/comments/uva9za/comment/i9kaxf9/?utm_source=reddit&utm_medium=web2x&context=3
-  words[4] = '..E';
+  words[2] = '..E';
 
   return words;
 }
@@ -206,10 +206,13 @@ export default function Crossword({ solved, onSolvePuzzle, showKeyboard, cypher 
   const renderCellLetter = (i, j) => {
     const classes = classNames('cell letter', { inputting: !solved && i === activeRow && j === activeColumn, active: !solved && GRID[i][j].findIndex(word => word.wordIndex === selectedActiveWord) !== -1 })
 
+    const hintIndex = CROSSWORD_LIST.findIndex(item => item.x === j && item.y === i);
+
     return (
       <div key={j} className={classes} onClick={() => changeActiveCell(i, j)}>
         <span>{ letters[i][j] }</span>
         <div className='caret' />
+        { hintIndex !== -1 && <div className='hint-index'>{ hintIndex + 1 }</div> }
       </div>
     );
   }
@@ -222,11 +225,11 @@ export default function Crossword({ solved, onSolvePuzzle, showKeyboard, cypher 
         <div className='confetti confetti-3'><Confetti active={solved} config={{ ...confettiConfig, STAGGER: 2000 }} /></div>
         { GRID.map((row, i) => (
           <div key={i} className='row'>
-          { row.map((column, j) => (
-            column === null
-            ? <div key={j} className='cell empty' />
-            : renderCellLetter(i, j)
-          ))}
+            { row.map((column, j) => (
+              column === null
+              ? <div key={j} className='cell empty' />
+              : renderCellLetter(i, j)
+            ))}
         </div>
       ))}
     </div>
