@@ -32,13 +32,27 @@ const initializeWords = () => {
     words[i] = '.'.repeat(CROSSWORD_LIST[i].length);
   }
 
+  // A letter was discovered on the thumbnail image by reditto: PerformanceVarious45
+  // https://www.reddit.com/r/Bitcoin/comments/uva9za/comment/i9kaxf9/?utm_source=reddit&utm_medium=web2x&context=3
+  words[4] = '..E';
+
   return words;
+}
+
+const initializeLetters = () => {
+  const letters = Array.from({ length: GRID_HEIGHT }, () => Array(GRID_WIDTH).fill(''));
+
+  // A letter was discovered on the thumbnail image by reditto: PerformanceVarious45
+  // https://www.reddit.com/r/Bitcoin/comments/uva9za/comment/i9kaxf9/?utm_source=reddit&utm_medium=web2x&context=3
+  letters[8][1] = 'E';
+
+  return letters;
 }
 
 export default function Crossword({ solved, onSolvePuzzle, showKeyboard, cypher }) {
 
   const [words, setWords] = useState(() => initializeWords());
-  const [letters, setLetters] = useState(() => Array.from({ length: GRID_HEIGHT }, () => Array(GRID_WIDTH).fill('')));
+  const [letters, setLetters] = useState(() => initializeLetters());
   const [activeColumn, setActiveColumn] = useState(CROSSWORD_LIST[0].x);
   const [activeRow, setActiveRow] = useState(CROSSWORD_LIST[0].y);
   const [selectedActiveWord, setSelectedActiveWord] = useState(0);

@@ -5,7 +5,7 @@
     pointer-events: none;
 
     .cell.letter {
-      background: linear-gradient(-45deg, #f0960f, #fde871, #f88437, #ffffff);
+      background: var(--solved-gradient);
       background-size: 400% 400%;
       animation: gradient 3s ease infinite;
       animation-delay: 0.5s;
@@ -25,10 +25,10 @@
     user-select: none;
 
     &.letter {
-      border: 1px solid black;
-      outline: 1px solid black;
-      box-shadow: 0 3px 0 1px #eaeaea;
-      background-color: white;
+      border: 1px solid var(--main-color);
+      outline: 1px solid var(--main-color);
+      box-shadow: 0 3px 0 1px var(--dim-background);
+      background-color: var(--background);
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -36,22 +36,22 @@
       cursor: pointer;
 
       &:hover:not(.active) {
-        background-color: #ffeb94;
+        background-color: var(--hover-cell);
       }
     }
 
     &.active {
-      background-color: #eaeaea;
+      background-color: var(--dim-background);
     }
     
     &.inputting {
       
       position: relative;
-      background-color: #ffd06b;
+      background-color: var(--active-cell);
 
       .caret {
         position: absolute;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--main-color);
         bottom: 4px;
         width: 50%;
         left: 50%;
@@ -88,6 +88,15 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
+
+  &.hg-theme-default {
+    background-color: var(--dim-background);
+    
+    .hg-button {
+      background: var(--background);
+      border-color: var(--dim-background);
+    }
+  }
 }
 
 @keyframes blink {

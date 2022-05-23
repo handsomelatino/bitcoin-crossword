@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--checkbox-bg);
     transition: 0.3s;
     border-radius: 18px;
 
@@ -41,11 +41,11 @@
   }
   
   input:checked + .slider {
-    background-color: #363636;
+    background-color: var(--checkbox-active);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #363636;
+    box-shadow: 0 0 1px var(--checkbox-active);
   }
   
   input:checked + .slider:before {
