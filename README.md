@@ -6,14 +6,25 @@ A bounty remains hidden behind this 5-word crossword, available at **[bitcoin-cr
 
 Created by [Handsome Latino](https://handsomelatino.com) using [React](https://github.com/facebook/create-react-app).
 
-## The total bounty is:
+## The total bounty inside the address  is:
 
 - ~0.01 BTC (one million sat)~ 
 - 0.01006614 BTC (1,006,614 sats)
 
-Donations to the bounty address are welcome while the puzzle remains unsolved.
+Donations are ~welcome while the puzzle remains unsolved~ no longer welcome, the puzzle has been [solved by o_e_l_e_o from bitcointalk.org](https://bitcointalk.org/index.php?topic=5399718.msg60202687#msg60202687) less than 20 hours before publishing, with the help of only the clues.
 
-[`bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn`](https://mempool.space/address/bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn)
+*Word hints have been added afterward to make it easy for anyone to solve it.*
+
+The address [`bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn`](https://mempool.space/address/bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn) was used to sign a message by o_e_l_e_o:
+
+```
+-----BEGIN BITCOIN SIGNED MESSAGE-----
+o_e_l_e_o solved the puzzle!
+-----BEGIN SIGNATURE-----
+bc1qe926cfhzyh438fyvn9snyrcrsfujp6ur3zcrrn
+HzgQNIxDWZyDHnzMLB5ImhAeFxaVweRCA0i6EmU5k9NuQ7ENA1YLC1uJh6Y720ZE5JU7A0RuH1dlqI5 d7DrqGrQ=
+-----END BITCOIN SIGNED MESSAGE-----
+```
 
 ## Running the project
 
